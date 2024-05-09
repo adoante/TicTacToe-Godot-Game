@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://bufvm71fwuds1"]
+
+[ext_resource type="PackedScene" uid="uid://0r2bw4tditc7" path="res://Scenes/Tile.tscn" id="1_6pkl4"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_c1kvb"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="Tile" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(-33, -33)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile2" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(0, -33)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile3" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(33, -33)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile4" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(-33, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile5" parent="." instance=ExtResource("1_6pkl4")]
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile6" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(33, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile7" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(-33, 33)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile8" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(0, 33)
+metadata/_edit_use_anchors_ = true
+
+[node name="Tile9" parent="." instance=ExtResource("1_6pkl4")]
+position = Vector2(33, 33)
+metadata/_edit_use_anchors_ = true
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_c1kvb")

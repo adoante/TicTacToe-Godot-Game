@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://cj6x33qik6e8s"]
+
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="1_ulk8d"]
+
+[node name="Window" type="Window"]
+initial_position = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_top = 2.0
+offset_right = 51.0
+offset_bottom = 25.0
+text = "HELLO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_top = 29.0
+offset_right = 51.0
+offset_bottom = 37.0
+text = "Restart"
+script = ExtResource("1_ulk8d")
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
